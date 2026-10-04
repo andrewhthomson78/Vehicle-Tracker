@@ -1,0 +1,27 @@
+# Secrets / API keys
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Personal data (real vehicle records, uploaded documents)
+data/
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+
+# Python build artefacts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
