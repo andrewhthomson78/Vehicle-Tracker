@@ -3,7 +3,11 @@
   "name": "BMW M135i F20/F21 (N55 3.0 turbo, 2012–2016)",
   "match": {
     "make": "BMW",
-    "model": "M135"
+    "model": "M135",
+    "years": [
+      2012,
+      2016
+    ]
   },
   "source": "BMW Condition Based Service intervals for N55, plus specialist guidance (jxlperformance.co.uk). BMW's CBS on the car overrides this if shorter.",
   "items": [

@@ -261,7 +261,8 @@ STATIC = {".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".
 
 class Handler(BaseHTTPRequestHandler):
     def log_message(self, fmt, *args):
-        if "/api/" in (args[0] if args else ""):
+        # request lines only for the API; errors (args[0] is an HTTPStatus) always
+        if not args or not isinstance(args[0], str) or "/api/" in args[0]:
             sys.stderr.write("%s\n" % (fmt % args))
 
     def _send(self, code, payload, ctype="application/json"):

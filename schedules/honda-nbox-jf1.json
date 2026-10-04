@@ -3,7 +3,11 @@
   "name": "Honda N-BOX JF1 (1st gen 2011–2017, S07A 658cc kei, CVT, FWD)",
   "match": {
     "make": "Honda",
-    "model": "N-BOX"
+    "model": "N-BOX",
+    "years": [
+      2011,
+      2017
+    ]
   },
   "source": "Honda Japan maintenance schedule for N-BOX (JF1), converted from km. JDM import: parts by chassis code JF1.",
   "items": [

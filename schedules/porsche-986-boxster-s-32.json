@@ -3,7 +3,11 @@
   "name": "Porsche Boxster S 986 (M96 3.2 flat-six, 2003–2004)",
   "match": {
     "make": "Porsche",
-    "model": "Boxster"
+    "model": "Boxster",
+    "years": [
+      1996,
+      2004
+    ]
   },
   "source": "Porsche 986 maintenance schedule (stuttcars.com, pcarwise.com), with modern M96 practice.",
   "items": [

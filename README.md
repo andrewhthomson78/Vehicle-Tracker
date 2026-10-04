@@ -41,6 +41,8 @@ The generic templates in `schedules/` are only a starting point. For your actual
 - ask the assistant: *"research the manufacturer schedule for the van"*, or
 - add a JSON file in `schedules/` (same format as the generic ones, plus
   `"match": {"make": "Ford", "model": "Transit Custom"}` so new vehicles pick it up automatically).
+  `model` can be a list (`["MT-07", "XSR700"]`), and `"years": [2012, 2016]` limits it to vehicles built in those
+  years (either end can be `null`), so a classic's schedule doesn't get applied to a modern car with the same name.
 
 Items with no record are treated as **due from new** until you log them or set "last done" on the item.
 Log your last service and any big jobs (cambelt, brake fluid and so on) so the dates are right.

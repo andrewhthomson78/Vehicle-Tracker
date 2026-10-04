@@ -3,7 +3,11 @@
   "name": "VW Scirocco Mk2 GTI 1.8 8v (PB, K-Jetronic)",
   "match": {
     "make": "Volkswagen",
-    "model": "Scirocco"
+    "model": "Scirocco",
+    "years": [
+      1981,
+      1992
+    ]
   },
   "source": "Period VW schedule adapted for classic use (VW specialist practice). Classics are best serviced by time, as mileage is low.",
   "items": [
