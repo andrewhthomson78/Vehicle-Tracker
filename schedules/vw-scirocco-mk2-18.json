@@ -1,0 +1,68 @@
+{
+  "id": "vw-scirocco-mk2-18",
+  "name": "VW Scirocco Mk2 GTI 1.8 8v (PB, K-Jetronic)",
+  "match": {
+    "make": "Volkswagen",
+    "model": "Scirocco"
+  },
+  "source": "Period VW schedule adapted for classic use (VW specialist practice). Classics are best serviced by time, as mileage is low.",
+  "items": [
+    {
+      "name": "Engine oil & filter",
+      "every_service": true,
+      "notes": "10W-40 semi-synthetic or 15W-40 mineral."
+    },
+    {
+      "name": "Service inspection (underbody/sills rust, brake lines, CV boots, ball joints, exhaust, fuel lines)",
+      "every_service": true,
+      "notes": "Last MOT fails (2009) included brake judder and binding, ball joints, a broken coil spring and a leaking fuel pipe."
+    },
+    {
+      "name": "Spark plugs",
+      "interval_months": 24,
+      "interval_miles": 12000
+    },
+    {
+      "name": "Distributor cap, rotor & HT leads",
+      "interval_months": 48,
+      "interval_miles": 24000
+    },
+    {
+      "name": "Timing belt & tensioner (check water pump)",
+      "interval_months": 48,
+      "interval_miles": 40000
+    },
+    {
+      "name": "Alternator V-belt",
+      "interval_months": 48,
+      "interval_miles": 40000
+    },
+    {
+      "name": "Air filter",
+      "interval_months": 24,
+      "interval_miles": 20000
+    },
+    {
+      "name": "Fuel filter (K-Jetronic)",
+      "interval_months": 48,
+      "interval_miles": 36000,
+      "notes": "K-Jet hates stale fuel. After a long lay-up, drain and flush first."
+    },
+    {
+      "name": "Brake fluid",
+      "interval_months": 24
+    },
+    {
+      "name": "Coolant (G11)",
+      "interval_months": 24
+    },
+    {
+      "name": "Gearbox oil: check level",
+      "interval_months": 24
+    },
+    {
+      "name": "Tyre age check",
+      "interval_months": 72
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "yamaha-ttr250",
+  "name": "Yamaha TT-R250 (1993–2006, 249cc air-cooled DOHC, carb)",
+  "match": {
+    "make": "Yamaha",
+    "model": "TT-R250"
+  },
+  "source": "Yamaha TT-R250 owner's manual periodic maintenance chart (road/trail use), converted from km. Off-road use roughly halves these intervals.",
+  "items": [
+    {
+      "name": "Engine oil & filter",
+      "every_service": true,
+      "notes": "10W-40 motorcycle oil (JASO MA)."
+    },
+    {
+      "name": "Interim oil change",
+      "interval_months": 6,
+      "interval_miles": 2000,
+      "notes": "Yamaha interval for this engine is much shorter than your 5k rule. Oil every ~3,000 km, filter every second change."
+    },
+    {
+      "name": "Service inspection (brakes, tyres/spokes, wheel & swingarm bearings, cables, lights)",
+      "every_service": true
+    },
+    {
+      "name": "Drive chain clean, lube & adjust",
+      "every_service": true,
+      "notes": "Also every ride off-road. Replace chain and sprockets as a set."
+    },
+    {
+      "name": "Air filter (foam): clean & re-oil",
+      "interval_months": 6,
+      "interval_miles": 1000,
+      "notes": "After every dusty or muddy ride."
+    },
+    {
+      "name": "Valve clearances",
+      "interval_months": 12,
+      "interval_miles": 4000
+    },
+    {
+      "name": "Spark plug",
+      "interval_months": 12,
+      "interval_miles": 4000
+    },
+    {
+      "name": "Carburettor: idle, sync & clean",
+      "interval_months": 12,
+      "notes": "Drain the float bowl if it's laid up."
+    },
+    {
+      "name": "Steering head & suspension linkage bearings: grease",
+      "interval_months": 12
+    },
+    {
+      "name": "Brake fluid",
+      "interval_months": 24
+    },
+    {
+      "name": "Fork oil & seals",
+      "interval_months": 24
+    },
+    {
+      "name": "Tyre age check",
+      "interval_months": 72
+    }
+  ]
+}

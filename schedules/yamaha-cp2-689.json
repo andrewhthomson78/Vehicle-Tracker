@@ -1,0 +1,61 @@
+{
+  "id": "yamaha-cp2-689",
+  "name": "Yamaha 689cc CP2 (MT-07 / Tracer 7 / XSR700 / Ténéré 700 / R7)",
+  "match": {
+    "make": "Yamaha",
+    "model": "R7"
+  },
+  "source": "Yamaha EU periodic maintenance chart for CP2 models (10,000 km / 12 mo service), summarised.",
+  "items": [
+    {
+      "name": "Engine oil & filter",
+      "every_service": true,
+      "notes": "Yamaha: every 10,000 km (6,000 mi) / 12 months. Your 5k rule sits inside that."
+    },
+    {
+      "name": "Service inspection (brakes, tyres, wheels, suspension, cables, lights, idle/throttle sync)",
+      "every_service": true
+    },
+    {
+      "name": "Drive chain clean, lube & adjust",
+      "every_service": true,
+      "notes": "Also every ~500 mi and after rain. Replace chain and sprockets as a set."
+    },
+    {
+      "name": "Spark plugs",
+      "interval_months": 24,
+      "interval_miles": 12000
+    },
+    {
+      "name": "Air filter",
+      "interval_miles": 24000
+    },
+    {
+      "name": "Valve clearances",
+      "interval_miles": 24000
+    },
+    {
+      "name": "Steering head bearings: check & re-grease",
+      "interval_months": 24,
+      "interval_miles": 12000
+    },
+    {
+      "name": "Brake fluid",
+      "interval_months": 24
+    },
+    {
+      "name": "Brake hoses",
+      "interval_months": 48
+    },
+    {
+      "name": "Coolant",
+      "interval_months": 36
+    },
+    {
+      "name": "Fork oil",
+      "interval_months": 48,
+      "interval_miles": 24000,
+      "notes": "Not strictly in Yamaha's chart, but worth doing."
+    }
+  ]
+}
