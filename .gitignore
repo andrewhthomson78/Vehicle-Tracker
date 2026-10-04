@@ -26,6 +26,5 @@ venv/
 .idea/
 .vscode/
 
-# Compiled OCR helper (rebuild: swiftc -O ocr.swift -o ocr)
-ocr
-!ocr.swift
+# Compiled OCR helper (built automatically from tools/ocr.swift on first scan)
+tools/ocr
