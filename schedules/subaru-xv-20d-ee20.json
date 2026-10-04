@@ -1,0 +1,81 @@
+{
+  "id": "subaru-xv-20d-ee20",
+  "name": "Subaru XV 2.0D (EE20 boxer diesel, 6MT, 2012–2017)",
+  "match": {
+    "make": "Subaru",
+    "model": "XV"
+  },
+  "source": "Subaru UK EE20 diesel schedule (12 months / 12,500 mi basis), summarised. Check against the service book.",
+  "items": [
+    {
+      "name": "Engine oil & filter",
+      "every_service": true,
+      "notes": "Low-SAPS C3 0W-30/5W-30 because of the DPF."
+    },
+    {
+      "name": "Service inspection (brakes, tyres, steering, suspension bushes, CV boots, leaks, battery)",
+      "every_service": true,
+      "notes": "Watch the anti-roll bar and front arm rear bushes: they were MOT advisories in 2023–24."
+    },
+    {
+      "name": "Pollen / cabin filter",
+      "interval_months": 12,
+      "interval_miles": 12500
+    },
+    {
+      "name": "Fuel filter (drain water trap each service)",
+      "interval_months": 24,
+      "interval_miles": 25000
+    },
+    {
+      "name": "Air filter",
+      "interval_months": 36,
+      "interval_miles": 37500
+    },
+    {
+      "name": "Brake fluid",
+      "interval_months": 24
+    },
+    {
+      "name": "Gearbox & front/rear differential oil",
+      "interval_months": 48,
+      "interval_miles": 50000,
+      "notes": "Subaru: inspect every service, replace under severe use (towing, short trips, off-road). 4x4 so there are three oils."
+    },
+    {
+      "name": "Auxiliary drive belt",
+      "interval_months": 48,
+      "interval_miles": 50000,
+      "notes": "Inspect every service."
+    },
+    {
+      "name": "Glow plugs (inspect)",
+      "interval_months": 48,
+      "interval_miles": 50000
+    },
+    {
+      "name": "Coolant (Subaru Super Coolant)",
+      "interval_months": 72,
+      "interval_miles": 75000,
+      "notes": "First change at 11 years / 137,500 mi, then every 6 years / 75,000 mi."
+    },
+    {
+      "name": "Timing chain & tensioner (inspect)",
+      "interval_miles": 100000,
+      "notes": "EE20 has a chain, not a belt. Listen for rattle on a cold start."
+    },
+    {
+      "name": "DPF health / forced regen check",
+      "interval_months": 12,
+      "notes": "Mostly short trips? Ask for a DPF soot-load check."
+    },
+    {
+      "name": "Air-con service / re-gas",
+      "interval_months": 24
+    },
+    {
+      "name": "Wiper blades",
+      "interval_months": 12
+    }
+  ]
+}

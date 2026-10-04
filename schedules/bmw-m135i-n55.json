@@ -1,0 +1,73 @@
+{
+  "id": "bmw-m135i-n55",
+  "name": "BMW M135i F20/F21 (N55 3.0 turbo, 2012–2016)",
+  "match": {
+    "make": "BMW",
+    "model": "M135"
+  },
+  "source": "BMW Condition Based Service intervals for N55, plus specialist guidance (jxlperformance.co.uk). BMW's CBS on the car overrides this if shorter.",
+  "items": [
+    {
+      "name": "Engine oil & filter",
+      "every_service": true,
+      "notes": "BMW LL-01 5W-30. BMW allows ~10k/12 mo. Your 5k rule suits a turbo direct-injection engine."
+    },
+    {
+      "name": "Service inspection (brakes, tyres, suspension, leaks: oil filter housing and rocker cover gaskets)",
+      "every_service": true,
+      "notes": "The N55 electric water pump and thermostat often fail around 60–80k mi. Replace on first warning."
+    },
+    {
+      "name": "Microfilter / cabin filter",
+      "interval_months": 24,
+      "interval_miles": 20000
+    },
+    {
+      "name": "Air filter",
+      "interval_months": 48,
+      "interval_miles": 36000
+    },
+    {
+      "name": "Spark plugs",
+      "interval_months": 72,
+      "interval_miles": 60000,
+      "notes": "BMW figure. Specialists do 30–40k on N55, sooner if remapped."
+    },
+    {
+      "name": "Brake fluid",
+      "interval_months": 24,
+      "notes": "BMW: after 3 years, then every 2. Every 2 is simpler."
+    },
+    {
+      "name": "Coolant",
+      "interval_months": 48,
+      "interval_miles": 60000,
+      "notes": "BMW lists lifetime fill. Specialists recommend 4 years / 60k."
+    },
+    {
+      "name": "ZF 8HP automatic gearbox fluid & sump/filter",
+      "interval_months": 96,
+      "interval_miles": 75000,
+      "notes": "BMW says lifetime fill. ZF recommends 8–10 years / 60–75k mi. Many specialists do 50k."
+    },
+    {
+      "name": "Rear differential oil",
+      "interval_months": 96,
+      "interval_miles": 60000,
+      "notes": "Sooner with a limited-slip diff or track use."
+    },
+    {
+      "name": "Auxiliary drive belt",
+      "interval_months": 72,
+      "interval_miles": 60000
+    },
+    {
+      "name": "Air-con service / re-gas",
+      "interval_months": 24
+    },
+    {
+      "name": "Wiper blades",
+      "interval_months": 12
+    }
+  ]
+}

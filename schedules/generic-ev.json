@@ -1,0 +1,15 @@
+{
+  "id": "generic-ev",
+  "name": "Generic battery electric",
+  "source": "Generic guide. Replace with the manufacturer schedule for your exact model.",
+  "items": [
+    {"name": "Service inspection (brakes, tyres, steering, suspension, HV cabling, 12V battery)", "every_service": true, "notes": "No oil changes. Your 12 months / 5,000 miles rule is applied as an inspection."},
+    {"name": "Tyre rotation", "interval_months": 12, "interval_miles": 6000, "notes": "EVs wear tyres faster because of weight and torque."},
+    {"name": "Pollen / cabin filter", "interval_months": 12},
+    {"name": "Brake fluid", "interval_months": 24},
+    {"name": "Brake caliper clean & lube", "interval_months": 12, "notes": "Regen means pads/discs barely work and seize or corrode, especially in UK winters."},
+    {"name": "Battery / drive-unit coolant", "interval_months": 96, "notes": "Many are sealed for life. Check the handbook."},
+    {"name": "Air-con desiccant bag", "interval_months": 72},
+    {"name": "Wiper blades", "interval_months": 12}
+  ]
+}

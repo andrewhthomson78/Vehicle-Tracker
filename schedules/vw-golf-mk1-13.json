@@ -1,0 +1,70 @@
+{
+  "id": "vw-golf-mk1-13",
+  "name": "VW Golf Mk1 1.3 (1983, carburettor)",
+  "match": {
+    "make": "Volkswagen",
+    "model": "Golf"
+  },
+  "source": "Period VW schedule adapted for classic use. Historic vehicle (built before 1986): usually MOT-exempt and zero road tax, but it must still be taxed (at £0) or declared SORN.",
+  "items": [
+    {
+      "name": "Engine oil & filter",
+      "every_service": true,
+      "notes": "15W-40 or 20W-50 mineral."
+    },
+    {
+      "name": "Service inspection (rust: sills/floors/arches, brake lines, CV boots, suspension, exhaust)",
+      "every_service": true,
+      "notes": "Even if MOT-exempt, a voluntary MOT each year is sensible."
+    },
+    {
+      "name": "Ignition: plugs, points & dwell (if fitted), timing",
+      "interval_months": 12,
+      "interval_miles": 6000
+    },
+    {
+      "name": "Distributor cap, rotor & HT leads",
+      "interval_months": 48,
+      "interval_miles": 24000
+    },
+    {
+      "name": "Carburettor: idle, mixture & choke adjustment",
+      "interval_months": 12
+    },
+    {
+      "name": "Timing belt & tensioner",
+      "interval_months": 48,
+      "interval_miles": 40000
+    },
+    {
+      "name": "Alternator V-belt",
+      "interval_months": 48,
+      "interval_miles": 40000
+    },
+    {
+      "name": "Air filter",
+      "interval_months": 24,
+      "interval_miles": 20000
+    },
+    {
+      "name": "Fuel filter (in-line)",
+      "interval_months": 24
+    },
+    {
+      "name": "Brake fluid",
+      "interval_months": 24
+    },
+    {
+      "name": "Coolant",
+      "interval_months": 24
+    },
+    {
+      "name": "Gearbox oil: check level",
+      "interval_months": 24
+    },
+    {
+      "name": "Tyre age check",
+      "interval_months": 72
+    }
+  ]
+}

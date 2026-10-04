@@ -1,0 +1,17 @@
+{
+  "id": "generic-hybrid",
+  "name": "Generic petrol hybrid",
+  "source": "Generic guide. Replace with the manufacturer schedule for your exact model.",
+  "items": [
+    {"name": "Engine oil & filter", "every_service": true},
+    {"name": "Service inspection incl. hybrid system health check", "every_service": true, "notes": "Some makers (e.g. Toyota) tie hybrid battery warranty extensions to an annual health check."},
+    {"name": "Pollen / cabin filter", "interval_months": 12, "interval_miles": 12000},
+    {"name": "Hybrid battery cooling air filter", "interval_months": 24, "interval_miles": 20000, "notes": "If fitted (often under the rear seat)."},
+    {"name": "Air filter", "interval_months": 48, "interval_miles": 40000},
+    {"name": "Brake fluid", "interval_months": 24},
+    {"name": "Spark plugs", "interval_months": 96, "interval_miles": 60000},
+    {"name": "Engine & inverter coolant", "interval_months": 120, "interval_miles": 100000},
+    {"name": "Air-con service / re-gas", "interval_months": 24},
+    {"name": "Wiper blades", "interval_months": 12}
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "porsche-986-boxster-s-32",
+  "name": "Porsche Boxster S 986 (M96 3.2 flat-six, 2003–2004)",
+  "match": {
+    "make": "Porsche",
+    "model": "Boxster"
+  },
+  "source": "Porsche 986 maintenance schedule (stuttcars.com, pcarwise.com), with modern M96 practice.",
+  "items": [
+    {
+      "name": "Engine oil & filter",
+      "every_service": true,
+      "notes": "Porsche A40 0W-40/5W-40. Porsche allowed 15k/2 years, but 5k/12 months is best practice for the M96."
+    },
+    {
+      "name": "Service inspection (brakes & pipes, tyres, coolant pipes, RMS/oil leaks, radiators for debris)",
+      "every_service": true,
+      "notes": "Front radiators trap leaves and rot. MOTs noted corroded brake pipes (2015–16) and an oil leak."
+    },
+    {
+      "name": "Dust / cabin filter",
+      "interval_months": 12,
+      "interval_miles": 15000
+    },
+    {
+      "name": "Air filter",
+      "interval_months": 48,
+      "interval_miles": 30000
+    },
+    {
+      "name": "Spark plugs",
+      "interval_months": 48,
+      "interval_miles": 60000
+    },
+    {
+      "name": "Drive (auxiliary) belt",
+      "interval_months": 48,
+      "interval_miles": 60000,
+      "notes": "The M96 has timing chains, not a belt."
+    },
+    {
+      "name": "Brake & clutch fluid",
+      "interval_months": 24
+    },
+    {
+      "name": "Coolant",
+      "interval_months": 60,
+      "notes": "Porsche says 10 years. After a long lay-up, change it."
+    },
+    {
+      "name": "Manual gearbox oil",
+      "interval_months": 96,
+      "interval_miles": 60000
+    },
+    {
+      "name": "IMS bearing upgrade (if not already done)",
+      "interval_months": 120,
+      "interval_miles": 60000,
+      "notes": "2004 3.2s have the single-row IMS bearing, the failure-prone type. Upgrade proactively, ideally with a clutch and RMS. If it's been done, log it."
+    },
+    {
+      "name": "Tyre age check",
+      "interval_months": 72,
+      "notes": "Replace tyres over about 6–10 years old whatever the tread. Anything fitted before 2017 is well past it."
+    },
+    {
+      "name": "Air-con service / re-gas",
+      "interval_months": 24
+    }
+  ]
+}

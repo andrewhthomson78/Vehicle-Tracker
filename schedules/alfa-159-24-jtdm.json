@@ -1,0 +1,64 @@
+{
+  "id": "alfa-159-24-jtdm",
+  "name": "Alfa Romeo 159/Brera 2.4 JTDM 20v (5-cyl diesel)",
+  "match": {
+    "make": "Alfa Romeo",
+    "model": "159"
+  },
+  "source": "Alfa Romeo 18,000 mi / 12 mo schedule (alfaworkshop.co.uk) with cambelt at specialist-recommended interval.",
+  "items": [
+    {
+      "name": "Engine oil & filter",
+      "every_service": true,
+      "notes": "Selenia WR / ACEA C2-C3 5W-40 (DPF)."
+    },
+    {
+      "name": "Service inspection (brakes & pipes, handbrake cables, subframe/suspension corrosion, bushes, springs)",
+      "every_service": true,
+      "notes": "Past MOTs: rear subframe and arms corroded, brake pipes corroded, broken coil spring (2020). Check the underside closely."
+    },
+    {
+      "name": "Pollen / cabin filter",
+      "interval_months": 12,
+      "interval_miles": 18000
+    },
+    {
+      "name": "Fuel filter",
+      "interval_months": 24,
+      "interval_miles": 36000
+    },
+    {
+      "name": "Air filter",
+      "interval_months": 24,
+      "interval_miles": 36000
+    },
+    {
+      "name": "Brake fluid",
+      "interval_months": 24
+    },
+    {
+      "name": "Cambelt, tensioner, idlers, water pump & aux belt",
+      "interval_months": 48,
+      "interval_miles": 60000,
+      "notes": "Alfa's official interval is 5 years / 87k (140,000 km). Specialists advise 4 years / 60k. Interference engine: a snapped belt wrecks it."
+    },
+    {
+      "name": "Coolant",
+      "interval_months": 48
+    },
+    {
+      "name": "Swirl flaps / inlet manifold check",
+      "interval_months": 24,
+      "notes": "Known 2.4 20v weak point."
+    },
+    {
+      "name": "DPF / emissions check",
+      "interval_months": 12,
+      "notes": "Failed on smoke in 2022, and the tester queried whether the DPF has been modified."
+    },
+    {
+      "name": "Air-con service / re-gas",
+      "interval_months": 24
+    }
+  ]
+}

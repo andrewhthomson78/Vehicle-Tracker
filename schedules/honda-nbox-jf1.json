@@ -1,0 +1,77 @@
+{
+  "id": "honda-nbox-jf1",
+  "name": "Honda N-BOX JF1 (1st gen 2011–2017, S07A 658cc kei, CVT, FWD)",
+  "match": {
+    "make": "Honda",
+    "model": "N-BOX"
+  },
+  "source": "Honda Japan maintenance schedule for N-BOX (JF1), converted from km. JDM import: parts by chassis code JF1.",
+  "items": [
+    {
+      "name": "Engine oil",
+      "every_service": true,
+      "notes": "0W-20 (NA) / 0W-20 or 5W-30 (turbo). Honda Japan: NA every 15,000 km (9k mi) / 1 year; turbo every 5,000 km (3k mi) / 6 months. If it's the turbo, do an oil change between services too."
+    },
+    {
+      "name": "Oil filter",
+      "interval_months": 24,
+      "interval_miles": 9000,
+      "notes": "Honda: every second oil change. With your 5k rule, just do it every service."
+    },
+    {
+      "name": "Service inspection (brakes, tyres, suspension, CV boots, leaks, lights)",
+      "every_service": true
+    },
+    {
+      "name": "Pollen / cabin filter",
+      "interval_months": 12,
+      "interval_miles": 9000
+    },
+    {
+      "name": "Air filter",
+      "interval_months": 48,
+      "interval_miles": 30000
+    },
+    {
+      "name": "Spark plugs (iridium)",
+      "interval_miles": 60000,
+      "notes": "Honda: 100,000 km. Turbo engines often need them sooner."
+    },
+    {
+      "name": "CVT fluid (Honda HMMF)",
+      "interval_months": 48,
+      "interval_miles": 25000,
+      "notes": "JF1/JF2 use Honda Ultra HMMF (not HCF-2, which is for the JF3/JF4). Drain ~2.5–3 L from the 18 mm drain plug, refill the same amount, and check hot on the dipstick (between the HOT marks). Honda lists 'inspect'; changing every ~40,000 km protects the CVT, and a replacement CVT for an import is hard to find."
+    },
+    {
+      "name": "Brake fluid",
+      "interval_months": 24,
+      "notes": "Honda Japan: every shaken (2 years)."
+    },
+    {
+      "name": "Coolant (Honda Type 2)",
+      "interval_months": 72,
+      "interval_miles": 60000,
+      "notes": "First change at 11 years / 200,000 km, then every 6 years / 100,000 km."
+    },
+    {
+      "name": "12V battery (idle-stop type, e.g. M-42)",
+      "interval_months": 36,
+      "notes": "Idle-stop batteries wear out fast. Get the correct type."
+    },
+    {
+      "name": "Auxiliary drive belt (inspect)",
+      "interval_months": 48,
+      "interval_miles": 30000,
+      "notes": "The S07A has a timing chain, not a belt."
+    },
+    {
+      "name": "Air-con service / re-gas",
+      "interval_months": 24
+    },
+    {
+      "name": "Wiper blades",
+      "interval_months": 12
+    }
+  ]
+}
