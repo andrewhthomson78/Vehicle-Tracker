@@ -14,6 +14,9 @@ Tracks MOT, road tax, insurance and servicing for all your vehicles. It runs loc
 - **Calendar feed:** `http://localhost:8765/calendar.ics` has every deadline with 14-day reminders. In Calendar, use
   File → New Calendar Subscription. It only refreshes while the server is running.
 
+- **Inbox:** add records from anywhere, including from Claude on your phone. Anything dropped into the Google Drive
+  folder `Vehicle Tracker Inbox` (in My Drive) is imported within a minute or so while the server is running. See below.
+
 ## Run
 
 ```bash
@@ -47,6 +50,17 @@ The generic templates in `schedules/` are only a starting point. For your actual
 Items with no record are treated as **due from new** until you log them or set "last done" on the item.
 Log your last service and any big jobs (cambelt, brake fluid and so on) so the dates are right.
 
+## Inbox
+
+With Google Drive for desktop installed, the server watches `My Drive/Vehicle Tracker Inbox` (or `INBOX_DIR` in `.env`)
+every minute. Each `.json` file in it is one job: which vehicle, the work record, a mileage reading and any photos or
+PDFs to attach (they sit next to it in the folder). The format is at the top of `tracker/inbox.py`.
+
+- Imported jobs move to `processed/`, with what was added written into the file. Jobs that fail move to `failed/`
+  with the reason.
+- A job with a `ref` (an invoice number, say) is never imported twice.
+- The server keeps `vehicles.json` in the folder up to date, so whoever writes jobs can see which vehicles you have.
+
 ## Layout
 
 - `server.py`: HTTP server, routes and calendar feed (Python standard library only)
@@ -54,4 +68,5 @@ Log your last service and any big jobs (cambelt, brake fluid and so on) so the d
 - `tracker/govapi.py`: DVLA and DVSA clients, plus demo data
 - `tracker/agent.py`: assistant tools and the Claude tool-use loop
 - `tracker/db.py`: SQLite storage
+- `tracker/inbox.py`: imports jobs dropped into the inbox folder
 - `web/`: front end (plain HTML/JS/CSS)
