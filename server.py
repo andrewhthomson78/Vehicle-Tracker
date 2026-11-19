@@ -18,7 +18,6 @@ from urllib.parse import urlparse
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 WEB = os.path.join(ROOT, "web")
-PORT = int(os.environ.get("PORT", 8765))
 
 
 def load_env(path):
@@ -33,6 +32,7 @@ def load_env(path):
 
 
 load_env(os.path.join(ROOT, ".env"))
+PORT = int(os.environ.get("PORT", 8765))  # after .env, so PORT can be set there
 
 import base64  # noqa: E402
 import secrets  # noqa: E402

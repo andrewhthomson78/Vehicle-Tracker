@@ -25,6 +25,15 @@ cp .env.example .env               # then add your keys
 python3 server.py                  # http://localhost:8765
 ```
 
+To have it start when you log in and keep running in the background, with no Terminal window:
+
+```bash
+bash tools/install-service.sh      # --uninstall to stop and remove it
+```
+
+It restarts itself if it ever stops, and writes to `data/server.log`. Do this if you use the inbox, since records are
+only imported while the tracker is running.
+
 `python3 server.py --demo` runs the app with made-up vehicles in a separate database (`data/demo.db`), so you can try it
 without any API keys. Your real data is in `data/garage.db`.
 
@@ -70,3 +79,4 @@ PDFs to attach (they sit next to it in the folder). The format is at the top of 
 - `tracker/db.py`: SQLite storage
 - `tracker/inbox.py`: imports jobs dropped into the inbox folder
 - `web/`: front end (plain HTML/JS/CSS)
+- `tools/install-service.sh`: runs the server in the background on macOS (launchd)
