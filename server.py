@@ -37,7 +37,7 @@ load_env(os.path.join(ROOT, ".env"))
 import base64  # noqa: E402
 import secrets  # noqa: E402
 
-from tracker import agent, db, due, garage, govapi, scan, schedules  # noqa: E402
+from tracker import agent, db, due, garage, govapi, inbox, scan, schedules  # noqa: E402
 
 govapi.DEMO = "--demo" in sys.argv
 DB_PATH = os.path.join(ROOT, "data", "demo.db" if govapi.DEMO else "garage.db")
@@ -118,19 +118,11 @@ def api_add_record(body, vid):
     return {"id": rid}
 
 
-@route("POST", r"/api/vehicles/(\d+)/scan")
-def api_scan(body, vid):
-    """Save a photo/PDF of an invoice or MOT certificate, read it, and suggest what to log.
-    OCR runs outside the database lock; see Handler._handle."""
-    with lock:
-        v = garage._require(conn, int(vid))
-    raw = body.get("data") or ""
-    if "," in raw[:100]:
-        raw = raw.split(",", 1)[1]
-    blob = base64.b64decode(raw)
+def store_document(v, blob, name):
+    """Save a photo/PDF in the vehicle's documents folder and read its text. Doesn't touch the database."""
     if not blob or len(blob) > 25 * 1024 * 1024:
         raise ValueError("That file is empty or too big (25 MB max)")
-    ext = os.path.splitext(body.get("name") or "")[1].lower()
+    ext = os.path.splitext(name or "")[1].lower()
     ext = ext if ext in DOC_TYPES else ".pdf" if blob[:4] == b"%PDF" else ".jpg"
     folder = os.path.join(DOCS_DIR, str(v["id"]))
     os.makedirs(folder, exist_ok=True)
@@ -142,12 +134,31 @@ def api_scan(body, vid):
     except Exception as e:  # noqa: BLE001 - keep the photo even if it can't be read
         text = ""
         sys.stderr.write(f"OCR failed: {e}\n")
+    return path, text
+
+
+@route("POST", r"/api/vehicles/(\d+)/scan")
+def api_scan(body, vid):
+    """Save a photo/PDF of an invoice or MOT certificate, read it, and suggest what to log.
+    OCR runs outside the database lock; see Handler._handle."""
+    with lock:
+        v = garage._require(conn, int(vid))
+    raw = body.get("data") or ""
+    if "," in raw[:100]:
+        raw = raw.split(",", 1)[1]
+    path, text = store_document(v, base64.b64decode(raw), body.get("name"))
     with lock:
         parsed = scan.parse(text, v, db.list_items(conn, v["id"]), db.list_vehicles(conn))
         if not text.strip():
             parsed["warnings"].append("Rin couldn't read any text. Try a sharper, flatter photo, or fill it in by hand.")
         doc_id = db.add_document(conn, v["id"], os.path.relpath(path, ROOT), parsed["kind"], text)
     return {"document_id": doc_id, "parsed": parsed, "text": text}
+
+
+def inbox_document(v, blob, name):
+    """Save an inbox attachment. Called with the lock held."""
+    path, text = store_document(v, blob, name)
+    return db.add_document(conn, v["id"], os.path.relpath(path, ROOT), "invoice", text)
 
 
 @route("POST", r"/api/vehicles/(\d+)/mot-scan")
@@ -336,6 +347,9 @@ if __name__ == "__main__":
     server = ThreadingHTTPServer(("127.0.0.1", PORT), Handler)
     mode = "DEMO mode (sample data)" if govapi.DEMO else f"database {DB_PATH}"
     print(f"Vehicle Tracker on http://localhost:{PORT}  ({mode})")
+    if not govapi.DEMO or os.environ.get("INBOX_DIR"):  # demo only uses an inbox you point it at
+        threading.Thread(target=inbox.run_forever, args=(conn, lock, inbox_document, garage.log_work),
+                         daemon=True).start()
     try:
         server.serve_forever()
     except KeyboardInterrupt:
